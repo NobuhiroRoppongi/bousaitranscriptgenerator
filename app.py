@@ -163,7 +163,7 @@ def call_chatgpt(api_key, prompt_text, model="gpt-4o"):
         client = OpenAI(api_key=api_key)
         response = client.chat.completions.create(
             model=model,
-            max_tokens=30000,
+            max_tokens=15000,
             messages=[
                 {"role": "system", "content": "You are a helpful assistant executing the user's request precisely."},
                 {"role": "user", "content": prompt_text}
